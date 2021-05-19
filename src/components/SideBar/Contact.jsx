@@ -21,7 +21,7 @@ function Contact(props) {
         className={
           selected === props.contact._id
             ? `${styles['contact-active']} ${styles['contact-chat']}`
-            : ''
+            :  ''
         }
       >
         <div className={styles['contact-avatar']}>
