@@ -19,18 +19,22 @@ function FilterMessages() {
 
   return (
     <div className={styles.messageSearch}>
-      <span className="material-icons" onClick={handleSearchForm}>
-        search
-      </span>
+      <button className={styles.messageSearchIcon}>
+        <span className="material-icons" onClick={handleSearchForm}>
+          search
+        </span>
+      </button>
       {searchForm ? (
         <input type="text" value={filter} onChange={handleFilterMessages} />
       ) : (
         ''
       )}
       {filter.length !== 0 && (
-        <span className="material-icons" onClick={handleMessageSearchClear}>
-          clear
-        </span>
+        <button className={styles.messageClearIcon}>
+          <span className="material-icons" onClick={handleMessageSearchClear}>
+            clear
+          </span>
+        </button>
       )}
     </div>
   );

@@ -10,9 +10,7 @@ function Profile() {
   const load = useSelector((state) => state.application.loading);
   const showProfile = useSelector((state) => state.messages.showProfile);
 
-  return load ? (
-    'Идёт подгрузка данных'
-  ) : (
+  return (
     <CSSTransition
       in={showProfile}
       unmountOnExit

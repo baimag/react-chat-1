@@ -16,6 +16,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #dedede;
+  text-align: center;
 }
 
 .header-center-block span {
@@ -28,27 +29,39 @@
   border-radius: 5px;
 }
 
-.messageSearch:hover {
-  box-shadow: inset 0 0 3px 1px #dedede;
-}
-
 .messageSearch input {
   display: flex;
   border: none;
   outline: none;
   border-radius: 3px;
+  position: absolute;
+  left: 26%;
+  top: 1.7%;
 }
 
-.messageSearch span:hover {
+.messageSearch button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: absolute;
+  z-index: 10;
+  color: grey;
+  top: 1.6%;
+  padding: 0;
+}
+
+.messageClearIcon {
+  left: 37%;
+}
+
+.messageSearch span:hover,
+.messageSettings span:hover {
   text-shadow: 1px 1px 2px grey;
 }
 
 .messageAuthorName {
   display: flex;
   align-items: center;
-  margin-right: 160px;
-  position: absolute;
-  left: 55%;
 }
 
 .messageAuthorNameTitle {

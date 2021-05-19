@@ -12,7 +12,6 @@ function Header() {
   const contact = contacts.find((contact) => contact._id === params);
   const loadingMessages = useSelector((state) => state.messages.loading);
   const showProfile = useSelector((state) => state.messages.showProfile);
-
   const handleChangeShow = () => {
     dispatch(changeShowProfile(showProfile));
   };

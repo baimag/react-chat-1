@@ -3,6 +3,7 @@ import styles from './messages.module.css';
 import { setDeleteMessage } from '../../redux/ducks/messages';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import dayjs from 'dayjs';
 
 function OutboxMessage(props) {
   const readMessage = props.message.read;
@@ -18,7 +19,7 @@ function OutboxMessage(props) {
       <div className={styles.messageDesignOut}>
         <div className={styles.messageOutText}>{props.content}</div>
         <div className={styles.messageTime}>
-          {timeSendMessage.substr(11, 5)}
+          {dayjs(timeSendMessage).format('HH:mm')}
         </div>
         <div className={styles.messageRead}>
           {readMessage === true ? (
