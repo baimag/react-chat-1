@@ -12,7 +12,7 @@ function Sidebar() {
   const loading = useSelector((state) => state.contacts.loading);
   const filter = useSelector((state) => state.contacts.filter);
 
-  const filteredContacts = contacts.filter(
+  const filteredContact = contacts.filter(
     (contact) =>
       contact.fullname.toUpperCase().indexOf(filter.toUpperCase()) > -1,
   );
@@ -30,8 +30,8 @@ function Sidebar() {
       <div className={styles['contacts-chats']}>
         {loading
           ? skeleton
-          : filteredContacts.map((contact) => {
-              return <Contact key={contact._id} contact={contact} />;
+          : filteredContact.map((contact) => {
+              return  <Contact key={contact._id} contact={contact} />;
             })}
       </div>
     </div>
